@@ -7,6 +7,7 @@ function App({ domElement }) {
 	const docName = domElement.getAttribute("data-doc-name") || "Document";
 	const backColor = domElement.getAttribute("data-back-color");
 	const autoClose = domElement.getAttribute("data-auto-close") || "false";
+	let audio = new Audio("./sounds/done.mp3");
 
 	let [imgSrc, setImgSrc] = useState("");
 	let [imgTitle, setImgTitle] = useState("");
@@ -32,6 +33,7 @@ function App({ domElement }) {
 		setHeading(`Uploading...`);
 		setTimeout(() => {
 			setHeading(`${docName} Uploaded`);
+			audio.play();
 		}, 8000);
 	}
 
