@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>ABC Bank Website</title>
+		<link
+			rel="stylesheet"
+			href="./index.css"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<div class="img-container">
+					<img src="./favicon.ico" alt="Website Logo" />
+				</div>
+				<div>ABC Bank</div>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="" class="highlight">Home</a>
+					</li>
+					<li>
+						<a href="">Nav 2</a>
+					</li>
+					<li>
+						<a href="">Nav 3</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="section1">
+				<div class="left-section">
+					<h1>
+						This is a very basic ABC Bank Website to show how Invoid
+						Web Widget will work.
+					</h1>
+					<h2>
+						The widget can be added as small component. It will take
+						full width and height of parent element. You can add
+						styles to class "root" to apply your styles.
+					</h2>
+				</div>
+				<div class="right-section">
+					<div class="root root1" data-doc-name="Pan Card"></div>
+				</div>
+			</section>
+            <section class="section2">
+                <h2>
+                    We can also pass data-attributes to widget to change Document Name or Background Color according to your use Case.
+                </h2>
+                <div style="width: 100%;">
+					<div class="root root2" data-back-color="#efedfe" data-doc-name="Aadhar Card"></div>
+				</div>
+			</section>
+            </section>
+            <section class="section3">
+                <div class="left-section">
+                    <h2>Or Just open another window and then start the proccess.</h2>
+                    <h2 style="margin-top: 20px;">This webiste was created using plain HTML and CSS to show widget can be applied to any website. The widget code is written in react.</h2>
+                    <button onclick="window.open('./widgetPage.html')">Start Verification Process</button>
+                </div>
+                <div class="right-section flex-center">
+                    <div class="img-container">
+                        <img src="./click_here.png" alt="Click Button Below" >
+                    </div>
+                </div>
+            </section>
+		</main>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://unpkg.com/react@17/umd/react.development.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+			crossorigin
+		></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
