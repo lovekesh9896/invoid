@@ -4,13 +4,14 @@ import { upload, secure } from "./icons/icons";
 import Progress from "./Progress";
 
 function App({ domElement }) {
-	const docName = domElement.getAttribute("data-doc-name");
+	const docName = domElement.getAttribute("data-doc-name") || "Document";
 	const backColor = domElement.getAttribute("data-back-color");
-	const autoClose = domElement.getAttribute("data-auto-close") || "true";
+	const autoClose = domElement.getAttribute("data-auto-close") || "false";
 
 	let [imgSrc, setImgSrc] = useState("");
 	let [imgTitle, setImgTitle] = useState("");
 	let [isUploading, setIsUploading] = useState(false);
+	let [heading, setHeading] = useState(`Upload ${docName}`);
 
 	function imagePreview(e) {
 		console.log(e.target.files[0]);
@@ -28,12 +29,16 @@ function App({ domElement }) {
 
 	function handleUploadBtn(e) {
 		setIsUploading(true);
+		setHeading(`Uploading...`);
+		setTimeout(() => {
+			setHeading(`${docName} Uploaded`);
+		}, 8000);
 	}
 
 	return (
 		<div className="app" style={{ background: backColor }}>
 			<div className="image-upload-container">
-				<h2 className="heading">Upload {docName}</h2>
+				<h2 className="heading">{heading}</h2>
 				{isUploading === true ? (
 					<Progress autoClose={autoClose} />
 				) : (
