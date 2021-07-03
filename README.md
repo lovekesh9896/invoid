@@ -3,6 +3,8 @@
 The widget is created with react. To show that widget can be added to any code repo and save time, I am using github pages to host.
 4 files in home directory index.html, style.css, script.js and widgetPage are normal HTML and css and js files to be rendered by github. Other than that whole directory is bootstraped with create-react-app.
 
+The ABC Bank website is kept as simple as possible to show custom website. Some elements are kept bugy to demostrate the client website.
+
 ## Available Scripts
 
 In the project directory, you can run:
