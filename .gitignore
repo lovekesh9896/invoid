@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#parcel
+.cache
+
 # production
 /build
 

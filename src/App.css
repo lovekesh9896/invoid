@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding: 4%;
+	background: #efedfe;
+	font-family: "Lato", sans-serif;
+	box-sizing: border-box;
+	text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app * {
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-upload-container {
+	width: 100%;
+	background-color: white;
+	border-radius: 8px;
+	padding: 8px 0;
+	overflow-y: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading {
+	color: #243270;
+	padding: 0 10px 10px 40px;
+	border-bottom: 1px solid #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+.img-title {
+	padding: 0 10% 10px 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app h3 {
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.img-title input {
+	width: 100%;
+	height: 50px;
+	padding-left: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1.2rem;
+}
+
+.upload-container {
+	padding: 0 10% 10px 40px;
+}
+
+.upload-area {
+	border: 2px dashed #ccc;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;
+}
+
+.upload-area > * {
+	margin-top: 20px;
+	font-size: 1.3rem;
+}
+
+.upload-info {
+	display: flex;
+	justify-content: space-between;
+	color: #7b84a9;
+}
+.preview {
+	width: 100%;
+	padding: 0px 10% 10px 40px;
+	overflow: hidden;
+}
+
+.preview img {
+	width: 100%;
+}
+
+.upload-btn {
+	width: 100%;
+	background: #0044ff;
+	color: white;
+	border: none;
+	outline: none;
+	height: 50px;
+	font-size: 1.2rem;
+	border-radius: 8px;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+.remove-btn {
+	width: 100%;
+	background: white;
+	color: rgb(215, 71, 71);
+	border: 2px solid rgb(215, 71, 71);
+	outline: none;
+	height: 50px;
+	font-size: 1.2rem;
+	border-radius: 8px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+	.image-upload-container {
+		width: 100%;
+	}
 }
